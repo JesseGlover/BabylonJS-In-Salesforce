@@ -1,27 +1,10 @@
 /**
- * Created by Jesse on 3/3/2020.
+ * Created by Jesse on 3/4/2020.
  */
 
-import {LightningElement, track} from 'lwc';
-// Babylon JS is the minified version and is a static resource (stored as single file, not zip)
-import babylonResource from '@salesforce/resourceUrl/babylon';
-// loadScript is what allows for us to call the imported js code
-import { loadScript } from 'lightning/platformResourceLoader';
-
-export default class BabylonJslwc extends LightningElement {
-
-    renderedCallback() {
-        loadScript(this, babylonResource)
-            .then(() => {
-                this.octTreeBabylonJs();
-            })
-            .catch(error => {
-                alert(error.body.message);
-            });
-    }
-
-    initializeBabylonJs() {
-        var canvas = this.template.querySelector("canvas"); // Get the canvas element
+({
+    initializeBabylonJs : function(component, event, helper) {
+        var canvas = component.find("canvas").getElement(); // Get the canvas element
         var engine = new BABYLON.Engine(canvas, true); // Generate the BABYLON 3D engine
 
         /******* Add the create scene function ******/
@@ -30,7 +13,7 @@ export default class BabylonJslwc extends LightningElement {
             var scene = new BABYLON.Scene(engine);
 
             // Add a camera to the scene and attach it to the canvas
-            var camera = new BABYLON.ArcRotateCamera("Camera", Math.PI / 2, Math.PI / 2, 2, new BABYLON.Vector3(0, 0, 5), scene);
+            var camera = new BABYLON.ArcRotateCamera("Camera", Math.PI / 2, Math.PI / 2, 2, new BABYLON.Vector3(0,0,5), scene);
             camera.attachControl(canvas, true);
 
             // Add lights to the scene
@@ -38,7 +21,7 @@ export default class BabylonJslwc extends LightningElement {
             var light2 = new BABYLON.PointLight("light2", new BABYLON.Vector3(0, 1, -1), scene);
 
             // Add and manipulate meshes in the scene
-            var sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {diameter: 2}, scene);
+            var sphere = BABYLON.MeshBuilder.CreateSphere("sphere", {diameter:2}, scene);
 
             return scene;
         };
@@ -55,10 +38,10 @@ export default class BabylonJslwc extends LightningElement {
         window.addEventListener("resize", function () {
             engine.resize();
         });
-    }
+    },
 
-    basicSceneBabylonJS() {
-        var canvas = this.template.querySelector("canvas"); // Get the canvas element
+    basicSceneBabylonJS : function(component, event, helper)  {
+        var canvas = component.find("canvas").getElement(); // Get the canvas element
         var engine = new BABYLON.Engine(canvas, true); // Generate the BABYLON 3D engine
 
         /******* Add the create scene function ******/
@@ -105,10 +88,10 @@ export default class BabylonJslwc extends LightningElement {
         window.addEventListener("resize", function () {
             engine.resize();
         });
-    }
+    },
 
-    actionSceneBabylonJS() {
-        var canvas = this.template.querySelector("canvas"); // Get the canvas element
+    actionSceneBabylonJS : function(component, event, helper)  {
+        var canvas = component.find("canvas").getElement(); // Get the canvas element
         var engine = new BABYLON.Engine(canvas, true); // Generate the BABYLON 3D engine
 
         /******* Add the create scene function ******/
@@ -276,10 +259,10 @@ export default class BabylonJslwc extends LightningElement {
         window.addEventListener("resize", function () {
             engine.resize();
         });
-    }
+    },
 
-    dragAndDropBabylonJs() {
-        var canvas = this.template.querySelector("canvas"); // Get the canvas element
+    dragAndDropBabylonJs : function(component, event, helper)  {
+        var canvas = component.find("canvas").getElement(); // Get the canvas element
         var engine = new BABYLON.Engine(canvas, true); // Generate the BABYLON 3D engine
 
         /******* Add the create scene function ******/
@@ -426,10 +409,10 @@ export default class BabylonJslwc extends LightningElement {
         window.addEventListener("resize", function () {
             engine.resize();
         });
-    }
+    },
 
-    dragAndDropMovingObjectsBabyonJS() {
-        var canvas = this.template.querySelector("canvas"); // Get the canvas element
+    dragAndDropMovingObjectsBabyonJS : function(component, event, helper) {
+        var canvas = component.find("canvas").getElement(); // Get the canvas element
         var engine = new BABYLON.Engine(canvas, true); // Generate the BABYLON 3D engine
 
         /******* Add the create scene function ******/
@@ -667,10 +650,10 @@ export default class BabylonJslwc extends LightningElement {
         window.addEventListener("resize", function () {
             engine.resize();
         });
-    }
+    },
 
-    octTreeBabylonJs() {
-        var canvas = this.template.querySelector("canvas"); // Get the canvas element
+    octTreeBabylonJs : function(component, event, helper) {
+        var canvas = component.find("canvas").getElement(); // Get the canvas element
         var engine = new BABYLON.Engine(canvas, true); // Generate the BABYLON 3D engine
 
         /******* Add the create scene function ******/
@@ -721,4 +704,4 @@ export default class BabylonJslwc extends LightningElement {
             engine.resize();
         });
     }
-}
+});
