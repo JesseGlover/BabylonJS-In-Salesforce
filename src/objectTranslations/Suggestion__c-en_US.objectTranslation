@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Suggestion</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Suggestions</value>
+    </caseValues>
+    <fields>
+        <label><!-- Implemented Date --></label>
+        <name>Implemented_Date__c</name>
+    </fields>
+    <fields>
+        <label><!-- Number of Days Open --></label>
+        <name>Number_Of_Days_Open__c</name>
+    </fields>
+    <fields>
+        <label><!-- Status --></label>
+        <name>Status__c</name>
+        <picklistValues>
+            <masterLabel>Implemented</masterLabel>
+            <translation><!-- Implemented --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>In Progress</masterLabel>
+            <translation><!-- In Progress --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>New</masterLabel>
+            <translation><!-- New --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Under Consideration</masterLabel>
+            <translation><!-- Under Consideration --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Suggestion Category --></label>
+        <name>Suggestion_Category__c</name>
+        <picklistValues>
+            <masterLabel>Customer Service</masterLabel>
+            <translation><!-- Customer Service --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Employee Services</masterLabel>
+            <translation><!-- Employee Services --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Facilities/ IT</masterLabel>
+            <translation><!-- Facilities/ IT --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Kitchen Snacks</masterLabel>
+            <translation><!-- Kitchen Snacks --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Other</masterLabel>
+            <translation><!-- Other --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <help><!-- Please enter as much detail around this suggestion so we clearly understand your idea. --></help>
+        <label><!-- Suggestion Description --></label>
+        <name>Suggestion_Description__c</name>
+    </fields>
+    <layouts>
+        <layout>Suggestion Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+        <sections>
+            <label><!-- Description --></label>
+            <section>Description</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+    <validationRules>
+        <errorMessage><!-- The implementation date must be today or in the past, not in the future. --></errorMessage>
+        <name>Date_in_Range</name>
+    </validationRules>
+</CustomObjectTranslation>

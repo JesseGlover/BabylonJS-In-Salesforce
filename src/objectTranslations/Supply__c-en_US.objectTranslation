@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Supply</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Supplies</value>
+    </caseValues>
+    <fields>
+        <label><!-- Battle Station --></label>
+        <name>Battle_Station__c</name>
+        <relationshipLabel><!-- Supplies --></relationshipLabel>
+    </fields>
+    <fields>
+        <label><!-- Quantity --></label>
+        <name>Quantity__c</name>
+    </fields>
+    <fields>
+        <label><!-- Total Cost --></label>
+        <name>Total_Cost__c</name>
+    </fields>
+    <fields>
+        <label><!-- Unit Cost --></label>
+        <name>Unit_Cost__c</name>
+    </fields>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>

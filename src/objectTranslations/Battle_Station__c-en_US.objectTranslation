@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObjectTranslation xmlns="http://soap.sforce.com/2006/04/metadata">
+    <caseValues>
+        <plural>false</plural>
+        <value>Battle Station</value>
+    </caseValues>
+    <caseValues>
+        <plural>true</plural>
+        <value>Battle Stations</value>
+    </caseValues>
+    <fields>
+        <label><!-- Crew Members --></label>
+        <name>Crew_Members__c</name>
+    </fields>
+    <fields>
+        <label><!-- Project Status --></label>
+        <name>Project_Status__c</name>
+        <picklistValues>
+            <masterLabel>Complete</masterLabel>
+            <translation><!-- Complete --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Green</masterLabel>
+            <translation><!-- Green --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Red</masterLabel>
+            <translation><!-- Red --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Yellow</masterLabel>
+            <translation><!-- Yellow --></translation>
+        </picklistValues>
+    </fields>
+    <fields>
+        <label><!-- Weapons Status --></label>
+        <name>Weapons_Status__c</name>
+        <picklistValues>
+            <masterLabel>Fully Operational</masterLabel>
+            <translation><!-- Fully Operational --></translation>
+        </picklistValues>
+        <picklistValues>
+            <masterLabel>Not Yet Operational</masterLabel>
+            <translation><!-- Not Yet Operational --></translation>
+        </picklistValues>
+    </fields>
+    <layouts>
+        <layout>Battle Station Layout</layout>
+        <sections>
+            <label><!-- Custom Links --></label>
+            <section>Custom Links</section>
+        </sections>
+    </layouts>
+    <startsWith>Consonant</startsWith>
+</CustomObjectTranslation>
